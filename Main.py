@@ -83,11 +83,9 @@ def ingre_npy (y,path='./'):
     x_train =np.array(Signals)
     return x_train
 
-if __name__ == "__main__":
+def init_main(path='./', path_res_dat = './'):
     
-    path ='D:/samantha/universidad/8° octavo/Optativa II/Proyecto/mitdb'
-    path_res ='D:/samantha/universidad/8° octavo/Optativa II/Proyecto/mitdb/data'
-    path_res_dat = 'D:/samantha/universidad/8° octavo/Optativa II/Proyecto/mitdb/dataset'
+    path_res =path+'/data'
     y_train = init_proces(path,path_res)
     x_train = ingre_npy(y_train,path_res_dat)
     print(x_train.shape[2])
