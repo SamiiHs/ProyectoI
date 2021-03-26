@@ -85,7 +85,7 @@ def ingre_npy (y,path='./'):
 
 def init_main(path='./', path_res_dat = './'):
     
-    path_res =path+'/data'
+    path_res ='/content/ProyectoI/data'
     y_train = init_proces(path,path_res)
     x_train = ingre_npy(y_train,path_res_dat)
     print(x_train.shape[2])
