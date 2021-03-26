@@ -77,12 +77,12 @@ def ingre_npy (y,path='./'):
         if file.endswith(".mat"): # Comprueba que termina en .mat para saber que es una señal
             data = scipy.io.loadmat(f)['matriz_senalC'] # Carga la señal
             data = data[:6000,]
-            for i in [0,1,2,3]:
-                seg = data[:,i]
-                seg=np.transpose(seg)
-                coeffs = pw.swt(seg, wavelet = "dB6", level=4)
-                subsen = coeffs[3][0]
-                data[:,i] = np.transpose(subsen)
+            #for i in [0,1,2,3]:
+            #    seg = data[:,i]
+            #    seg=np.transpose(seg)
+            #    coeffs = pw.swt(seg, wavelet = "dB6", level=4)
+            #    subsen = coeffs[3][0]
+            #    data[:,i] = np.transpose(subsen)
             #print(data)
             Signals.append(data)
             length = data.shape
