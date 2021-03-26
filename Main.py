@@ -94,7 +94,7 @@ def init_main(path='./', path_res_dat = './'):
     patience = 20
     print("#######################################################")
     print("model_2_Bi_LSTM")
-    model_2_Bi_LSTM, history_2_Bi_LSTM = train_Bi_LSTM(x_train, y_train, epochs = model_epoch)
+    model_2_Bi_LSTM, history_2_Bi_LSTM = train_2_Bi_LSTM(x_train, y_train, epochs = model_epoch)
     print(history_2_Bi_LSTM)
     model_2_Bi_LSTM.save('Model_2_Bi_LSTM_' + str(len(history_2_Bi_LSTM.losses))+ '.h5')
     #y_train = model_2_Bi_LSTM.predict(x_train)
