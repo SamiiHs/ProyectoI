@@ -89,14 +89,13 @@ def ingre_npy (y,path='./'):
     x_train =np.array(Signals)
     return x_train
 
-def init_main(path='./', path_res_dat = './'):
+def init_main(path='./', path_res_dat = './', model_epoch =30):
     
     path_res ='/content/ProyectoI/data'
     y_train = init_proces(path,path_res)
     x_train = ingre_npy(y_train,path_res_dat)
     print(x_train.shape[2])
     print(x_train.shape[1])
-    model_epoch = 30
     patience = 20
     print("#######################################################")
     print("model_2_Bi_LSTM")
